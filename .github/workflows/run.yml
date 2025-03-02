@@ -1,7 +1,7 @@
 name: Run Python Script
 on:
   schedule:
-    - cron: '0 * * * *'  # هر ساعت اجرا شود
+    - cron: '0 */4 * * *'  # Every 4 hours (due to GitHub limits)
 jobs:
   run:
     runs-on: ubuntu-latest
