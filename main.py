@@ -11,7 +11,10 @@ def catch_data():
    # data = prepare_data()
   #  predictions = sc.inverse_transform(model.predict(x_train) )
    # predictions = model.predict(data)
-    pd.DataFrame(data).to_csv("data.csv", index=False)
+    if data.empty:
+      raise ValueError(f"Failed to fetch data for ticker {ticker}")
+    else:
+      pd.DataFrame(data).to_csv("data.csv", index=False)
 
 
 if __name__ == "__main__":
