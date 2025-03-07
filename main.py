@@ -1,4 +1,5 @@
 import yfinance as yf
+import pandas as pd
 
 ticker = 'GOOGL'
 data = yf.download(ticker, start="2020-01-01", end="2022-03-06")
